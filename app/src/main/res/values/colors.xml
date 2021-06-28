@@ -9,10 +9,9 @@
     <color name="white">#FFFFFFFF</color>
 
     <!-- custom colors -->
-    <color name="black_rock_fill">#0E0234</color>
     <color name="royal_blue">#532eec</color>
     <color name="bright_turquoise">#39f5e5</color>
-    <color name="black_rock">#39f5e5</color>
-    <color name="anakiwa">#39f5e5</color>
+    <color name="black_rock">#0e0234</color>
+    <color name="anakiwa">#98fff6</color>
 
 </resources>

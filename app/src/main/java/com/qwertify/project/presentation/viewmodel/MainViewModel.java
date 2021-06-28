@@ -1,4 +1,4 @@
-package com.qwertify.project.ui.main;
+package com.qwertify.project.presentation.viewmodel;
 
 import androidx.lifecycle.ViewModel;
 

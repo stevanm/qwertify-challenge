@@ -1,10 +1,11 @@
-package com.qwertify.project;
+package com.qwertify.project.presentation.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-import com.qwertify.project.ui.main.MainFragment;
+import com.qwertify.project.R;
+import com.qwertify.project.presentation.fragment.MainFragment;
 
 public class MainActivity extends AppCompatActivity {
 

@@ -1,4 +1,4 @@
-package com.qwertify.project.ui.main;
+package com.qwertify.project.presentation.fragment;
 
 import androidx.lifecycle.ViewModelProvider;
 
@@ -13,6 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.qwertify.project.R;
+import com.qwertify.project.presentation.viewmodel.MainViewModel;
 
 public class MainFragment extends Fragment {
 
