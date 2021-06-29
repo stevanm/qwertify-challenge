@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.qwertify.project.R;
-import com.qwertify.project.presentation.fragment.MainFragment;
+import com.qwertify.project.presentation.fragment.AuthFragment;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -13,10 +13,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_activity);
+
         if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction()
-                    .replace(R.id.container, MainFragment.newInstance())
+                    .replace(R.id.container, AuthFragment.newInstance())
                     .commitNow();
         }
+
     }
 }
