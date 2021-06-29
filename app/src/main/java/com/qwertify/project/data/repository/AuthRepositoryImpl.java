@@ -56,14 +56,14 @@ public class AuthRepositoryImpl implements AuthRepository {
                     }
                 } else {
                     Log.d("Error:", response.message());
-                    resourceStatusLiveData.setValue(new Resource.Error());
+                    resourceStatusLiveData.setValue(new Resource.Error(response.message()));
                 }
             }
 
             @Override
             public void onFailure(Call<LoginNetworkApi> call, Throwable t) {
                 Log.d("Error:", t.getLocalizedMessage());
-                resourceStatusLiveData.setValue(new Resource.Error());
+                resourceStatusLiveData.setValue(new Resource.Error(t.getLocalizedMessage()));
             }
         });
 

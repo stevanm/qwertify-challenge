@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">Qwertify Challenge</string>
+    <string name="welcome_back">Welcome back</string>
+    <string name="save_apps">Pass App will save and secure your passwords</string>
+    <string name="forgotten_password">Forgotten password</string>
+    <string name="login">login</string>
+    <string name="google">google</string>
+    <string name="facebook">facebook</string>
+    <string name="email_address">Email address</string>
+    <string name="password">Password</string>
+    <string name="don_t_have_an_account">Don’t have an account?</string>
+    <string name="sign_up">sign up</string>
+
+    <string name="welcome_to_pass_fragment">Password fragment!</string>
 </resources>

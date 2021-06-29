@@ -13,5 +13,11 @@
     <color name="bright_turquoise">#39f5e5</color>
     <color name="black_rock">#0e0234</color>
     <color name="anakiwa">#98fff6</color>
+    <color name="white2">#fcfcfc</color>
+    <color name="violent_violet">#1c0a58</color>
+    <color name="vivid_tangerine">#ff9083</color>
+    <color name="malibu">#6896ff</color>
+    <color name="sunglow">#ffcc36</color>
+    <color name="torch_red">#ff1d1d</color>
 
 </resources>
