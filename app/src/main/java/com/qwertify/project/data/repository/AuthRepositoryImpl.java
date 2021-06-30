@@ -52,7 +52,7 @@ public class AuthRepositoryImpl implements AuthRepository {
                     if (response.body() != null && response.body().getUser() != null) {
                         Log.d("Data:", response.body().toString());
                         userLoginMutableLiveData.postValue(loginMapper.mapFromEntity(response.body()));
-                        resourceStatusLiveData.setValue(new Resource.Success());
+                        resourceStatusLiveData.setValue(new Resource.Success(loginMapper.mapFromEntity(response.body())));
                     }
                 } else {
                     Log.d("Error:", response.message());

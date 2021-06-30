@@ -16,4 +16,20 @@ public class UserLogin {
         this.name = name;
         this.emailVerifiedAt = emailVerifiedAt;
     }
+
+    public String getJwt() {
+        return jwt;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getEmailVerifiedAt() {
+        return emailVerifiedAt;
+    }
 }

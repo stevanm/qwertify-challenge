@@ -1,6 +1,7 @@
 package com.qwertify.project.presentation.fragment;
 
 import android.content.Context;
+import android.graphics.Paint;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -18,6 +19,7 @@ import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textview.MaterialTextView;
 import com.qwertify.project.R;
 import com.qwertify.project.data.network.Resource;
+import com.qwertify.project.domain.model.login.UserLogin;
 import com.qwertify.project.presentation.activity.MainActivity;
 import com.qwertify.project.presentation.viewmodel.AuthViewModel;
 import com.qwertify.project.utils.ValidationUtil;
@@ -27,6 +29,7 @@ import org.jetbrains.annotations.NotNull;
 public class AuthFragment extends Fragment {
 
     private AuthViewModel authViewModel;
+    private UserLogin userLogin;
 
     //ui elements
     private TextInputEditText emailEditText;
@@ -77,6 +80,9 @@ public class AuthFragment extends Fragment {
                 Toast.makeText(mainActivity.getApplicationContext(), "ERROR: " + ((Resource.Error) resource).errorMessage, Toast.LENGTH_SHORT).show();
             } else if (resource instanceof Resource.Success) {
                 Toast.makeText(mainActivity.getApplicationContext(), "Logged successful!", Toast.LENGTH_SHORT).show();
+                UserLogin ul = ((Resource.Success) resource).userLogin;
+                //cache token
+                authViewModel.cacheAuthData(ul.getJwt());
                 mainActivity.getSupportFragmentManager().beginTransaction()
                         .replace(R.id.container, PasswordListFragment.newInstance())
                         .commitNow();
@@ -94,6 +100,8 @@ public class AuthFragment extends Fragment {
         googleLinearLayout = view.findViewById(R.id.google_login);
         signupTextView = view.findViewById(R.id.sign_up);
 
+        forgottenPasswordTextView.setPaintFlags(forgottenPasswordTextView.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
+
         loginButton.setOnClickListener(v -> {
             String email = null != emailEditText.getText() ? emailEditText.getText().toString().trim() : "";
             if (!ValidationUtil.isEmailValid(email)) {
@@ -104,6 +112,9 @@ public class AuthFragment extends Fragment {
             authViewModel.login(email, pass);
         });
 
+        facebookLinearLayout.setOnClickListener(v -> Toast.makeText(mainActivity.getApplicationContext(), "Not implemented yet!", Toast.LENGTH_SHORT).show());
+        googleLinearLayout.setOnClickListener(v -> Toast.makeText(mainActivity.getApplicationContext(), "Not implemented yet!", Toast.LENGTH_SHORT).show());
+        signupTextView.setOnClickListener(v -> Toast.makeText(mainActivity.getApplicationContext(), "Not implemented yet!", Toast.LENGTH_SHORT).show());
     }
 
 }
